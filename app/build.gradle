@@ -5,15 +5,15 @@ plugins {
 }
 
 android {
-    namespace 'cn.uvuejs.kux'
+    namespace 'com.vesdkdeluxe.demo202408.x'
 	compileSdk 34
 	
 	buildFeatures {
-		buildConfig true
+		buildConfig false
 	}
 
     defaultConfig {
-        applicationId 'cn.uvuejs.kux'
+        applicationId 'com.vesdkdeluxe.demo202408.x'
         minSdk 21
 		targetSdk 30
         versionCode 100
@@ -22,24 +22,19 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
 
-        buildConfigField "String", "UTSRegisterComponents", "\"[{\\\"name\\\":\\\"video\\\",\\\"class\\\":\\\"uts.sdk.modules.DCloudUniVideo.VideoComponent\\\"}]\""
 		
 
         ndk {
         }
 
-        manifestPlaceholders = [
-            "GETUI_APPID" : "121212",
-            "GY_APP_ID" : "121212",
-        ]
     }
 
     signingConfigs {
         config {
             storeFile file("../app/debug.keystore")
-            storePassword "adminadmindebug"
-            keyAlias "androiddebugkey"
-            keyPassword "adminadmindebug"
+            storePassword 'xpksdk123^%$'
+            keyAlias 'xpk sdk'
+            keyPassword 'xpksdk123^%$'
         }
     }
 
@@ -88,16 +83,5 @@ dependencies {
     implementation project(':uniappx')
     implementation fileTree(include: ['*.aar', '*.jar'], dir: '../uniappx/libs')
     implementation "com.squareup.okhttp3:okhttp:3.12.12"
-	implementation project(':kux-audio-player')
-    implementation 'com.squareup.okhttp3:okhttp:3.11.0'
-    implementation 'com.squareup.okio:okio:1.14.0'
-    implementation 'com.alibaba:fastjson:1.2.83'
-    implementation 'com.aliyun.dpa:oss-android-sdk:+'
-    implementation 'com.github.bumptech.glide:glide:4.9.0'
-    implementation 'androidx.annotation:annotation:1.1.0'
-    implementation 'androidx.core:core:1.1.0'
-    implementation 'com.getui:gtc:3.2.13.0'
-    implementation 'com.squareup.okhttp3:okhttp:3.12.12'
-    implementation 'androidx.recyclerview:recyclerview:1.0.0'
-    implementation 'androidx.appcompat:appcompat:1.0.0'
+	implementation project(':ve-sdk')
 }
