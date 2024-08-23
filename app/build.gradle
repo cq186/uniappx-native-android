@@ -32,9 +32,9 @@ android {
     signingConfigs {
         config {
             storeFile file("../app/debug.keystore")
-            storePassword 'xpksdk123^%$'
-            keyAlias 'xpk sdk'
-            keyPassword 'xpksdk123^%$'
+            storePassword "xpksdk123^%$"
+            keyAlias "xpk sdk"
+            keyPassword "xpksdk123^%$"
         }
     }
 
